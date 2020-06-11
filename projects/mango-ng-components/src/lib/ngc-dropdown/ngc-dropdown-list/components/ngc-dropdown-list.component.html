@@ -1,0 +1,5 @@
+<ul class="c-mngDropdown-list">
+    <li class="c-mngDropdown-list__item" *ngFor="let element of list" (click)="selectElement(element)">
+        <a class="c-mngDropdown-list__link">{{element.label}}</a>
+    </li>
+</ul>

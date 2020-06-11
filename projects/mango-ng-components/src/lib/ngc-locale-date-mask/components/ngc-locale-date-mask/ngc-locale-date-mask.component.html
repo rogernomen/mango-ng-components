@@ -1,0 +1,9 @@
+<div class="c-mngInput u-pt-0" [ngClass]="{'is-error': hasError}" [class.is-readonly]="editionDisabled">
+    <input class="c-mngInput__input"
+        type="text"
+        [placeholder]="placeHolder"
+        [ngcTextMask]="textMaskConfig"
+        [readonly]="editionDisabled"
+        [ngModel]="value"
+        (ngModelChange)="onInput($event)">
+</div>

@@ -1,0 +1,18 @@
+<div class="c-mngDropdown js-dropdown" [ngClass]="{'is-disabled': config?.disabled, 'is-open': dropdownVisible}">
+    <div class="c-mngDropdown__container">
+        <div class="c-mngDropdown__icon">
+            <i class="o-mngIco__arrow_down"></i>
+        </div>
+        <input
+            [disabled]="config?.disabled"
+            class="c-mngDropdown__input"
+            type="text"
+            [placeholder]="config?.placeholder"
+            [ngModel]="selectedValue"
+            (click)="onClickInput()"
+            readonly>
+        <div class="c-mngDropdown__content">
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>

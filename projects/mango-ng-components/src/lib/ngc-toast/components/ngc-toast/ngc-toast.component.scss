@@ -1,0 +1,30 @@
+@import "../../../../../node_modules/design-system-library/scss/itcss/settings/settings";
+@import "../../../../../node_modules/design-system-library/scss/itcss/tools/tools";
+
+$module: 'oa-toast';
+.#{$module} {
+    @include mng-rem(border-radius, 4px);
+    background-color: $color-woodsmoke;
+    box-shadow: 0 rem(3px) rem(6px) 0 rgba(0, 0, 0, 0.16);
+    @include mng-rem(padding, 16px);
+    z-index: 80;
+    font-weight: 400;
+    &__text {
+        color: $color-white;
+        @include mng-rem(font-size, 14px);
+        @include mng-rem(line-height, 20px);
+    }
+    &.is-mobile {
+        @include mng-rem(margin, 0 16px);
+        position: fixed;
+        left: 0;
+        right: 0;
+        @include mng-rem(bottom, 16px);
+    }
+    &.is-desktop {
+        @include mng-rem(width, 288px);
+        position: fixed;
+        @include mng-rem(right, 32px);
+        @include mng-rem(top, 88px);
+    }
+}

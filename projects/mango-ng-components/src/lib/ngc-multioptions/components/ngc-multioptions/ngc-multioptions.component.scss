@@ -1,0 +1,15 @@
+@import "../../../../../node_modules/design-system-library/scss/itcss/tools/tools";
+@import "../../../../../node_modules/design-system-library/scss/itcss/settings/settings";
+
+$module: 'c-mngMultiOptions';
+
+.#{$module} {
+    @include mng-rem(font-size, 12px);
+    position: relative;
+    &__clearSelection {
+        color: $color-bombay;
+        @include mng-rem(padding, 8px 0);
+        cursor: pointer;
+        font-weight: 300;
+    }
+}

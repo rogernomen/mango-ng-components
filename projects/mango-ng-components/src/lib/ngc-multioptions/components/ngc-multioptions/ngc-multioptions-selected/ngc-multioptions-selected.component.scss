@@ -1,0 +1,10 @@
+@import "../../../../../../node_modules/design-system-library/scss/itcss/tools/tools";
+@import "../../../../../../node_modules/design-system-library/scss/itcss/settings/settings";
+
+$module: "c-mngMultiOptions-selected";
+
+.#{$module} {
+    position: relative;
+    @include mng-rem(font-size, 12px);
+    @include mng-rem(padding-top, 8px);
+}

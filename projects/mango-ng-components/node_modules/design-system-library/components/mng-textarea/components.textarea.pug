@@ -1,0 +1,18 @@
+mixin mngTextarea(label,text,id,name,style)
+	.c-mngTextarea(class=style)
+		label.c-mngTextarea__label(for=id)= label
+		if (style !== "is-disabled")
+			textarea.c-mngTextarea__textarea(id=id, name=name, placeholder=text)
+		else
+			textarea.c-mngTextarea__textarea(id=id, name=name, placeholder=text, disabled)
+
+			
+
+mixin mngTextareaDisabled(label,text,id,name)
+	+mngTextarea(label,text, id,name,'is-disabled')
+
+mixin mngTextareaReverse(label,text,id,name)
+	+mngTextarea(label,text, id,name,'c-mngTextarea--reverse')
+
+mixin mngTextareaReverseDisabled(label,text,id,name)
+	+mngTextarea(label,text, id,name,'c-mngTextarea--reverse is-disabled')

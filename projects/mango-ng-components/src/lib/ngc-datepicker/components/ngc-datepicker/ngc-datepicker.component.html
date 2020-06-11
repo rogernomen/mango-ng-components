@@ -1,0 +1,48 @@
+<div class="datepicker-component">
+  <div class="c-mngInput" [ngClass]="{'is-error': invalid}">
+      <input class="c-mngInput__input c-mngInput__input--pl"
+             maxlength="10"
+             [readOnly]="readOnly"
+             [(ngModel)]="dateValue"
+             (input)="dateChanged()"
+             [placeholder]="placeholder"
+             (click)="showHideCalendar(!showCalendar);">
+      <button type="button" (click)="showHideCalendar(!showCalendar);" class="c-mngInput__btn c-mngInput__btn--fl">
+          <svg class="o-mngIco o-mngIco--excel o-mngIco--mr" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><defs><style>.cls-1{fill:#010002;}.cls-2{fill:none;}</style></defs><title>Recurso 385</title><g id="Capa_2" data-name="Capa 2"><g id="icons"><path class="cls-1" d="M14,2.53H12.34v-1a.5.5,0,0,0-1,0v1H8.49v-1a.5.5,0,0,0-1,0v1H4.65v-1a.5.5,0,0,0-1,0v1H2a1,1,0,0,0-1,1V14a1,1,0,0,0,1,1H14a1,1,0,0,0,1-1V3.51A1,1,0,0,0,14,2.53ZM14,14H2V3.51H3.65v.41a.5.5,0,0,0,1,0V3.51H7.5v.41a.5.5,0,0,0,1,0V3.51h2.86v.41a.5.5,0,0,0,1,0V3.51H14Z"/><rect class="cls-1" x="4.75" y="7.13" width="2" height="1"/><rect class="cls-1" x="9.25" y="7.13" width="2" height="1"/><rect class="cls-1" x="4.75" y="10.13" width="2" height="1"/><rect class="cls-1" x="9.25" y="10.13" width="2" height="1"/><rect class="cls-2" width="16" height="16"/></g></g></svg>
+      </button>
+  </div>
+  <div class="datepicker"
+       [class.show-calendar]="showCalendar"
+       [class.hide-calendar]="!showCalendar"
+       [ngClass]="popupCalendarClass">
+    <div class="datepicker-nav">
+      <div class="datepicker-nav-previous-month">
+        <button type="button" class="button is-text" (click)="changeMonth(-1)">
+          <svg id="left" viewBox="0 0 32 32"><path d="M10.1 15.9L23.3 2.7l.1-.1-.8-.8-14 14-.1.1 14.1 14.2.1.1.8-.8z"/></svg>
+        </button>
+      </div>
+      <div class="datepicker-nav-title">{{ headerCalendar | titlecase}}</div>
+      <div class="datepicker-nav-next-month">
+        <button type="button" class="button is-text" (click) = "changeMonth(1)">
+          <svg id="right" viewBox="0 0 32 32"><path d="M9.373 1.911l-.089-.088-.808.809 13.432 13.431L8.69 29.279l-.087.089.808.809 14.026-14.025.087-.089L9.373 1.911z"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="datepicker-container">
+      <div class="datepicker-header">
+        <div class="datepicker-date" *ngFor="let day of weekDaysHeaderArray">{{ day }}</div>
+      </div>
+      <div class="datepicker-body">
+        <div class="datepicker-date" *ngFor="let day of grid">
+          <div [class.is-disabled]="!day.available">
+            <button type="button" class="date-item" [class.datepicker-circle] = "day.today || day.selected"
+                    [class.is-active]="day.selected"[class.is-today]="day.today"
+                    *ngIf="day.value !== 0"
+                    (click)="selectDate(day, false)">{{ day.value }}</button>
+            <button class="date-item" *ngIf="day.value === 0"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

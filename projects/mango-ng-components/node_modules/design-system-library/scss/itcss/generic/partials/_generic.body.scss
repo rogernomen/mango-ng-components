@@ -1,0 +1,14 @@
+body {
+  @include mng-family-sans();
+  color: $color-woodsmoke;
+  background-color: $color-white;
+  font-weight: 300;
+}
+
+p {
+  @include mng-line-height(body);
+}
+
+img { 
+  max-width: 100%
+}

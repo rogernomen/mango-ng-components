@@ -1,0 +1,136 @@
+@import "../../../../../node_modules/design-system-library/scss/itcss/settings/partials/settings.variables";
+@import "../../../../../node_modules/design-system-library/scss/itcss/tools/tools";
+@import "../../../../../node_modules/design-system-library/components/mng-input/_components.input";
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.datepicker-input{
+    width: 100%;
+}
+
+.datepicker-component{
+    position: relative;
+    .c-mngInput {
+        padding-top:0;
+    }
+}
+
+.icon-calendar{
+    width: 1.6rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+.datepicker{
+    background: $color-white;
+    border: $color-woodsmoke;
+    display: block;
+    text-align: center;
+    max-width: 35.2rem;
+    min-width: 35.2rem;
+    padding: 3.2rem 4rem 4rem;
+    font-size: 14px;
+    box-shadow: 0 2px 7px $color-iron;
+    position: absolute;
+    z-index: 10;
+
+    &.hide-calendar{
+        display: none;
+    }
+
+    &.show-calendar{
+        display: block;
+    }
+
+    .datepicker-nav{
+        background: $color-white;
+        color: $color-woodsmoke;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2.4rem;
+        font-weight: 400;
+        button{
+            width: 1.6rem;
+            svg{
+                stroke: $color-woodsmoke;
+            }
+        }
+    }
+    .datepicker-header,
+    .datepicker-body {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    .datepicker-date {
+        flex: 0 0 calc(100% / 7);
+        margin-top: .8rem;
+        height: 3rem;
+        width: 3rem;
+        @include flex-center;
+
+      .date-item {
+        &:hover {
+          height: 3rem;
+          width: 3rem;
+          border-radius: 50%;
+          -moz-border-radius: 50%;
+          -webkit-border-radius: 50%;
+          background-color: $color-concrete;
+        }
+      }
+    }
+
+    .datepicker-header {
+        color: $color-bombay;
+        .datepicker-date {
+            margin-top: 0;
+        }
+    }
+
+    .datepicker-body {
+        color: $color-woodsmoke;
+    }
+
+    .is-disabled {
+        button{
+            color: $color-bombay;
+            cursor: not-allowed;
+        }
+    }
+
+    .datepicker-circle{
+        border-radius: 50%;
+        height:3rem;
+        -moz-border-radius:50%;
+        -webkit-border-radius:50%;
+        width:3rem;
+
+        @include flex-center;
+        &.is-active{
+          background-color: $color-woodsmoke;
+          color: $color-white;
+          &:hover {
+            background-color: $color-woodsmoke !important;
+          }
+        }
+    }
+
+  .is-today{
+    height: 3rem;
+    width: 3rem;
+    border:2px solid $color-nevada;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+  }
+
+}

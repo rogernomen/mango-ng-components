@@ -1,0 +1,51 @@
+
+
+
+<main>
+  <article>
+      <div class="container">
+          <div class="row">
+              <div class="col-xs-offset-1 col-xs-10 col-md-12 col-md-offset-0">
+                  <header>
+                      <h2>ngc-selectoption</h2>
+                  </header>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-xs-offset-1 col-xs-10 col-md-12 col-md-offset-0">
+                  <section>                        
+                      <section>
+                          <h3>Html:</h3>
+                          <pre><code>{{html}}</code></pre>
+                      </section>                         
+                      <section>
+                          <h3>Código:</h3>
+                          <pre><code>{{ts}}</code></pre>
+                      </section>   
+                      <section>
+                          <h3>Vista:</h3>                                      
+                          <div class="row">
+                              <div class="col-xs-8">
+                              
+                                <ngc-selectoption
+                                [(ngModel)]="selectedOption1"
+                                >
+                              
+                                  <ngc-selectoption-item *ngFor="let option of availableOptions1.top_hist" [keyText]="option.shopDescriptionCountry">
+                                    <img [src]="'assets/flags/1.png'">
+                                    <a class="c-mngLink">{{option.shopDescriptionCountry}}</a> <span class="country-list__qty"> ({{option.docCount}} unidades)</span>
+                                  </ngc-selectoption-item>  
+                              
+                                </ngc-selectoption>                              
+
+                              </div>
+                          </div>
+                      </section>                        
+                  </section>
+              </div>
+          </div>
+      </div>
+  </article>
+</main>
+      
+  

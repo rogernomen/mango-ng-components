@@ -1,0 +1,47 @@
+<main>
+  <article>
+      <div class="container">
+          <div class="row">
+              <div class="col-xs-offset-1 col-xs-10 col-md-12 col-md-offset-0">
+                  <header>
+                      <h2>ngc-authentication</h2>
+                  </header>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-xs-offset-1 col-xs-10 col-md-12 col-md-offset-0">
+                  <section>                        
+                        <section>
+                            <h3>Input Fields (Username / Password)</h3>
+                            <input [(ngModel)]="username" placeholder="username"/>
+                            <input [(ngModel)]="password" placeholder="password" type="password"/>
+                        </section>
+                        <section>
+                            <h3>Actions (open Chrome/development tools to watch action outputs)</h3>
+                            <button (click)="onLogin()">Pulse to Login</button>
+                        </section>
+                        <section>
+                            <button (click)="isLoggedIn()">Pulse to isLoggedIn</button>
+                        </section>                      
+                        <section>
+                            <button (click)="getToken()">Pulse to getToken</button>
+                        </section>                      
+                        <section>
+                            <button (click)="getRoles()">Pulse to getRoles</button>
+                        </section>            
+                        <section>
+                            <button (click)="refreshToken()">Pulse to refreshToken</button>
+                        </section>                      
+                        <section>
+                            <button (click)="logout()">Pulse to logout</button>
+                        </section>       
+                        <section>
+                            <button (click)="clickCallSecuredEndPoint()">Test token with Secured endpoint</button>
+                        </section>                                                   
+                    </section>
+              </div>
+          </div>
+      </div>
+  </article>
+</main>
+  

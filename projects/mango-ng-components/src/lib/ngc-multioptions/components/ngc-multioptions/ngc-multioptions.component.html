@@ -1,0 +1,22 @@
+<div class="c-mngMultiOptions">
+
+  <ngc-multioptions-results
+    [showResultsOnInit]="showResultsOnInit"
+    [options]="options"
+    [optionsSelected]="optionsSelected"
+    [multioptionsText]="multioptionsText"
+    (selectOption)="selectOption($event)"
+    (unSelectOption)="unSelectOption($event)"
+        [class]="class"></ngc-multioptions-results>
+
+  <ngc-multioptions-selected
+    *ngIf="selectedItemsList"[options]="optionsSelected"
+    [multioptionsText]="multioptionsText"
+    (unSelectOption)="unSelectOption($event)">
+  </ngc-multioptions-selected>
+
+  <button *ngIf="selectedItemsList && (optionsSelected?.length > 0)"
+        class="c-mngMultiOptions__clearSelection"
+        (click)="clearSelection()">{{multioptionsText.clearSelection}}</button>
+
+</div>

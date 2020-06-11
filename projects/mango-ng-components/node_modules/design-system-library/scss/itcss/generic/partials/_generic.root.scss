@@ -1,0 +1,20 @@
+
+
+
+:root {
+  @each $var-map-name, $var-map in $var-maps {
+    @each $var, $val in $var-map {
+      @if type-of($val) == map {
+        @each $var-n, $val-n in $val {
+         // #{--$var-map-name}-#{$var}-#{$var-n}: $val-n;
+          $prop: --#{$var-map-name}-#{$var}-#{$var-n};
+          #{$prop}: $val-n;
+        }
+      } @else {
+     //   #{--$var-map-name}-#{$var}: $val;
+          $prop: --#{$var-map-name}-#{$var};
+          #{$prop}: $val;
+      }
+    }
+  }
+}

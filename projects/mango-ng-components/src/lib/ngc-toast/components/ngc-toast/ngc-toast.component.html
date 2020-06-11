@@ -1,0 +1,23 @@
+<ng-template #content><ng-content></ng-content></ng-template>
+
+<div *ngIf="isMobile">  
+    <div *ngFor="let toast of toastList" 
+        class="oa-toast a-from-bottom is-mobile" @toastMobileAnimation
+        (@toastMobileAnimation.done)="toastAnimationLeave($event)"
+        [ngClass]="{'a-to-bottom': toastToRemove?.id === toast.id}">
+        <span class="oa-toast__text">
+            <ng-container *ngTemplateOutlet="content"></ng-container>
+        </span>
+    </div>
+</div>
+
+<div *ngIf="!isMobile">  
+    <div *ngFor="let toast of toastList" 
+        class="oa-toast a-from-bottom is-desktop" @toastDesktopAnimation
+        (@toastDesktopAnimation.done)="toastAnimationLeave($event)"
+        [ngClass]="{'a-to-bottom': toastToRemove?.id === toast.id}">
+        <span class="oa-toast__text">
+            <ng-container *ngTemplateOutlet="content"></ng-container>
+        </span>
+    </div>
+</div>

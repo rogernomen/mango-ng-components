@@ -1,0 +1,128 @@
+<div class="component">
+  <div class="component__header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h4 class="component__type">Form Components</h4>
+          <h2>ngc-checkbox-selectall</h2>
+          <p class="component__header-text">In case you want a component with an option to select all checkboxes this is your component</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container component__documentation">
+    <div class="row">
+      <div class="col-xs-12">
+        <h3 class="component__title">IMPORTS</h3>
+        <div class="component__code">
+          <p class="component__code-line" [innerHTML]="'import { NgcCheckboxSelectallComponent } from \'mango-ng-components\''"></p>
+        </div>
+        <div class="component__code">
+          <p class="component__code-line">@NgModule({{ '{' }}
+            imports: [ NgcCheckboxSelectallModule ]})
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row u-mt-4">
+    <div class="container">
+      <h3 class="component__title">USAGE</h3>
+      <div class="component__example">
+        <div class="component__example-view">
+          <div>
+            <ngc-checkbox-selectall [options]="availableOptions1" [(ngModel)]="selectedItems"></ngc-checkbox-selectall>
+          </div>
+          <div>
+
+          </div>
+        </div>
+        <div class="component__example-view--small">
+          Selected Values: {{selectedItems | json}}
+        </div>
+        <div class="component__example-html">
+          <p>CODE</p>
+        </div>
+        <div class="component__example-code">
+          <p class="component__code-line" [innerText]="'<ngc-checkbox-selectall [options]=\'availableOptions1\' [(ngModel)]=\'selectedItems\'></ngc-checkbox-selectall>'"></p>
+          <br />
+          <br />
+          <p class="component__code-line">interface Option {{ '{' }}</p>
+            <p class="u-ml-5 component__code-line">id: string;</p>
+            <p class="u-ml-5 component__code-line">name: string;</p>
+            <p class="u-ml-5 component__code-line">value: string;</p>
+            <p class="u-ml-5 component__code-line">label: string</p>
+          <p class="component__code-line">}</p>
+          <br />
+          <div class="component__ts-code">
+            <p class="component__code-line">export class NgcSelectallCheckboxViewComponent {{ '{' }}</p>
+
+            <p class="u-ml-5 component__code-line">selectedItems: Array&lt;string&gt; = [];</p>
+
+            <p class="u-ml-5 component__code-line">availableOptions1: Array&lt;Option&gt; = [ </p>
+            <p class="u-ml-10 component__code-line"> {{ '{' }}id: '01-BLANCO', name: 'BLANCO', value: 'BLANCO', label: 'BLANCO'},</p>
+            <p class="u-ml-10 component__code-line">{{ '{' }}id: '20-NARANJA', name: 'NARANJA', value: 'NARANJA', label: 'NARANJA'},</p>
+            <p class="u-ml-10 component__code-line"> {{ '{' }}id: '52-AZUL', name: 'AZUL', value: 'AZUL', label: 'AZUL'},</p>
+            <p class="u-ml-10 component__code-line">{{ '{' }}id: '99-NEGRO', name: 'NEGRO', value: 'NEGRO', label: 'NEGRO'}</p>
+            <p class="u-ml-5 component__code-line">];</p>
+            <p class="component__code-line">}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div class="container u-mb-10">
+      <div class="properties u-mt-8">
+          <h3 class="component__title">PROPERTIES</h3>
+          <table class="table">
+            <tr>
+              <th class="table__header u-textLeft">Name</th>
+              <th class="table__header u-textLeft">Type</th>
+              <th class="table__header u-textLeft">Default</th>
+              <th class="table__header u-textLeft">Required</th>
+              <th class="table__header u-textLeft">Description</th>
+            </tr>
+            <tr>
+              <td class="table__cell">options</td>
+              <td class="table__cell">array</td>
+              <td class="table__cell">null</td>
+              <td class="table__cell">true</td>
+              <td class="table__cell">Options to be checked</td>
+            </tr>
+            <tr>
+              <td class="table__cell">idSelectAllOption</td>
+              <td class="table__cell">string</td>
+              <td class="table__cell">null</td>
+              <td class="table__cell">true</td>
+              <td class="table__cell">Id it's gonna be assigned to component</td>
+            </tr>
+            <tr>
+              <td class="table__cell">selectAllLabel</td>
+              <td class="table__cell">string</td>
+              <td class="table__cell">Select All</td>
+              <td class="table__cell">false</td>
+              <td class="table__cell">Label that is gonna be printed in Select All option</td>
+            </tr>
+            <tr>
+              <td class="table__cell">selectAllName</td>
+              <td class="table__cell">string</td>
+              <td class="table__cell">null</td>
+              <td class="table__cell">false</td>
+              <td class="table__cell">Name property of the component</td>
+            </tr>
+            <tr>
+              <td class="table__cell">selectAllValue</td>
+              <td class="table__cell">string</td>
+              <td class="table__cell">null</td>
+              <td class="table__cell">false</td>
+              <td class="table__cell">Form value of select all checkbox</td>
+            </tr>
+          </table>
+        </div>
+
+</div>

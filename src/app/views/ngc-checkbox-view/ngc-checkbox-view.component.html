@@ -1,0 +1,177 @@
+<div class="component">
+  <div class="component__header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h4 class="component__type">Form Components</h4>
+          <h2>ngc-checkbox</h2>
+          <p class="component__header-text">Checkboxes are used when it's necessary to show a list of options which user can select multiple of them including selecting all of them or none</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container component__documentation">
+    <div class="row">
+      <div class="col-xs-12">
+        <h3 class="component__title">IMPORTS</h3>
+        <div class="component__code">
+          <p class="component__code-line" [innerHTML]="'import { NgcCheckboxModule } from \'mango-ng-components\''"></p>
+        </div>
+        <div class="component__code">
+          <p class="component__code-line">@NgModule({{ '{' }}
+            imports: [ NgcCheckboxModule ]})
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row u-mt-4">
+      <div class="col-xs-12">
+        <h3 class="component__title">USAGE</h3>
+        <div class="component__example">
+          <div class="component__example-view">
+            <div class="ngc-checkbox-view__families">
+              <ngc-checkbox [id]="'basic1'" [value]="'Woman'" [label]="'Woman'" [(ngModel)]="basicSelectedValues"></ngc-checkbox>
+              <ngc-checkbox [id]="'basic2'" [value]="'Man'" [label]="'Man'" [(ngModel)]="basicSelectedValues"></ngc-checkbox>
+              <div>Selected Values: <span *ngFor="let selection of basicSelectedValues">{{selection}} </span></div>
+            </div>
+          </div>
+          <div class="component__example-html">
+            <p>CODE</p>
+          </div>
+          <div class="component__example-code">
+            <p class="component__code-line" [innerText]="'<ngc-checkbox [id]=\'componentId\' [value]=\'Woman\' [label]=\'Woman\' [(ngModel)]=\'selectedValues\'></ngc-checkbox>'"></p>
+          </div>
+        </div>
+
+        <div class="component__example u-mt-5">
+          <div class="component__example-view">
+            <div class="ngc-checkbox-view__families">
+              <ngc-checkbox [id]="'preselected1'" [value]="'Woman'" [label]="'Woman'" [(ngModel)]="preselectedValues"></ngc-checkbox>
+              <ngc-checkbox [id]="'preselected2'" [value]="'Man'" [label]="'Man'" [(ngModel)]="preselectedValues"></ngc-checkbox>
+              <div>Selected Values: <span *ngFor="let selection of preselectedValues">{{selection}} </span></div>
+            </div>
+          </div>
+          <div class="component__example-html">
+            <p>CODE</p>
+          </div>
+          <div class="component__example-code">
+            <p class="component__code-line" [innerText]="'<ngc-checkbox [id]=\'componentId\' [value]=\'Woman\' [label]=\'Woman\' [(ngModel)]=\'preselectedValues\'></ngc-checkbox>'"></p>
+            <br />
+            <br />
+            <br />
+            <p class="component__code-line">export class ViewComponent {{'{'}}</p>
+            <p class="component__code-line u-pl-4">preselectedValues = ['Woman']</p>
+            <p class="component__code-line">}</p>
+          </div>
+        </div>
+
+        <div class="component__example u-mt-5">
+          <div class="component__example-view">
+            <div class="ngc-checkbox-view__families">
+              <ngc-checkbox [id]="'preselected3'" [value]="'Woman'" [label]="'Woman'" [(ngModel)]="inlineValues" [inline]="true"></ngc-checkbox>
+              <ngc-checkbox [id]="'preselected4'" [value]="'Man'" [label]="'Man'" [(ngModel)]="inlineValues" [inline]="true"></ngc-checkbox>
+              <div>Selected Values: <span *ngFor="let selection of inlineValues">{{selection}} </span></div>
+            </div>
+          </div>
+          <div class="component__example-html">
+            <p>CODE</p>
+          </div>
+          <div class="component__example-code">
+            <p class="component__code-line" [innerText]="'<ngc-checkbox [id]=\'componentId\' [value]=\'Woman\' [label]=\'Woman\' [(ngModel)]=\'preselectedValues\' [inline]=\'true\'></ngc-checkbox>'"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="properties u-mt-8">
+      <h3 class="component__title">PROPERTIES</h3>
+      <table class="table">
+        <tr>
+          <th class="table__header u-textLeft">Name</th>
+          <th class="table__header u-textLeft">Type</th>
+          <th class="table__header u-textLeft">Default</th>
+          <th class="table__header u-textLeft">Required</th>
+          <th class="table__header u-textLeft">Description</th>
+        </tr>
+        <tr>
+          <td class="table__cell">id</td>
+          <td class="table__cell">string</td>
+          <td class="table__cell">null</td>
+          <td class="table__cell">true</td>
+          <td class="table__cell">Checkbox Id</td>
+        </tr>
+        <tr>
+          <td class="table__cell">name</td>
+          <td class="table__cell">string</td>
+          <td class="table__cell">null</td>
+          <td class="table__cell">false</td>
+          <td class="table__cell">Name to be assigned to component</td>
+        </tr>
+        <tr>
+          <td class="table__cell">value</td>
+          <td class="table__cell">any</td>
+          <td class="table__cell">null</td>
+          <td class="table__cell">false</td>
+          <td class="table__cell">Checkbox value</td>
+        </tr>
+        <tr>
+          <td class="table__cell">label</td>
+          <td class="table__cell">string</td>
+          <td class="table__cell">null</td>
+          <td class="table__cell">false</td>
+          <td class="table__cell">Checkbox label value</td>
+        </tr>
+        <tr>
+          <td class="table__cell">disabled</td>
+          <td class="table__cell">boolean</td>
+          <td class="table__cell">false</td>
+          <td class="table__cell">false</td>
+          <td class="table__cell">Property to set checkbox disabled</td>
+        </tr>
+        <tr>
+          <td class="table__cell">checked</td>
+          <td class="table__cell">boolean</td>
+          <td class="table__cell">false</td>
+          <td class="table__cell">false</td>
+          <td class="table__cell">Property to set checked value without ngModel</td>
+        </tr>
+        <tr>
+          <td class="table__cell">indeterminate</td>
+          <td class="table__cell">boolean</td>
+          <td class="table__cell">false</td>
+          <td class="table__cell">false</td>
+          <td class="table__cell">When true, puts a minor sign inside checkbox when is unchecked</td>
+        </tr>
+        <tr>
+          <td class="table__cell">inline</td>
+          <td class="table__cell">boolean</td>
+          <td class="table__cell">false</td>
+          <td class="table__cell">false</td>
+          <td class="table__cell">When true, displays checkboxes in one line instead of column</td>
+        </tr>
+
+
+      </table>
+    </div>
+
+    <div class="ngc-checkbox-view__events u-mt-8">
+      <h3 class="component__title">EVENTS</h3>
+      <table class="table">
+        <tr>
+          <th class="table__header u-textLeft">Name</th>
+          <th class="table__header u-textLeft">Parameters</th>
+          <th class="table__header u-textLeft">Description</th>
+        </tr>
+        <tr>
+          <td class="table__cell">selectEmitter</td>
+          <td class="table__cell">HTMLElement</td>
+          <td class="table__cell">Fired when clicked on a checkbox and emits the html element</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+

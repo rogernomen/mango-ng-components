@@ -1,0 +1,26 @@
+<p class="u-mb--2">Dropdown component</p>
+
+<ngc-dropdown (select)="onSelectValue($event)" [config]="dropdownConfig">
+    <ngc-dropdown-list [list]="dropdownOptionsList"></ngc-dropdown-list>
+</ngc-dropdown>
+
+<ngc-dropdown (select)="onSelectValue($event)" [config]="dropdownConfig">
+  <ngc-dropdown-list [list]="otherDropdownOptionList"></ngc-dropdown-list>
+</ngc-dropdown>
+
+
+
+<form #testForm="ngForm">
+  <p>This is a form</p>
+  <ngc-dropdown
+    name="dropdown"
+    #dropdown="ngModel"
+    [(ngModel)]="formDropdownValue"
+    (selectEvent)="onSelectValue($event)"
+    [config]="dropdownConfig">
+    <ngc-dropdown-list [list]="formDropdownList"></ngc-dropdown-list>
+  </ngc-dropdown>
+</form>
+
+<br />
+<button (click) = "changeformDropdownValue()">Cambiar formDropdownValue a null</button>

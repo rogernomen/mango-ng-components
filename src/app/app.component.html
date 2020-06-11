@@ -1,0 +1,46 @@
+<div class="container-fluid">
+    <div class="row">
+        <aside class="mainNav col-xs-3">
+            <div class="mainNav__tit"><b>Componentes</b></div>
+            <ul class="mainNav__list">
+              <ul>
+                <div>Form</div>
+                <li><a [routerLink]="['/ngc-checkbox']">Checkbox</a></li>
+                <li><a [routerLink]="['/ngc-selectall-checkbox']">Checkbox Select All</a></li>
+                <li><a [routerLink]="['/ngc-datepicker']">Datepicker</a></li>
+                <li><a [routerLink]="['/ngc-multioptions']">MultiOptions</a></li>
+                <li><a [routerLink]="['/ngc-selectoption']">SelectOption</a></li>
+                <li><a [routerLink]="['/ngc-dropdown']">Dropdown</a></li>
+                <li><a [routerLink]="['/ngc-inline-dropdown']">InlineDropdown</a></li>
+
+              </ul>
+              <ul>
+                <div>Others</div>
+                <li><a [routerLink]="['/ngc-text-mask']">ngc-text-mask & others</a></li>
+
+
+                <li><a [routerLink]="['/ngc-login']">ngc-login</a></li>
+                <li><a [routerLink]="['/ngc-paginator']">ngc-paginator</a></li>
+                <li><a [routerLink]="['/ngc-tricheckbox']">ngc-tricheckbox</a></li>
+
+                <li><a [routerLink]="['/ngc-modal']">ngc-modal</a></li>
+                <li><a [routerLink]="['/ngc-user-menu']">ngc-user-menu</a></li>
+                <li><a [routerLink]="['/ngc-authentication']">ngc-authentication</a></li>
+
+
+                <li><a [routerLink]="['/ngc-kebab-menu']">ngc-kebab-menu</a></li>
+                <li><a [routerLink]="['/ngc-loader-page']">ngc-loader-page</a></li>
+
+                <li><a [routerLink]="['/ngc-accordion']">ngc-accordion</a></li>
+                <li><a [routerLink]="['/ngc-toast']">ngc-toast</a></li>
+                <li><a [routerLink]="['/ngc-attach-files']">ngc-attach-files</a></li>
+              </ul>
+
+            </ul>
+        </aside>
+        <main class="catalogView-article col-xs-9">
+            <router-outlet></router-outlet>
+        </main>
+    </div>
+</div>
+

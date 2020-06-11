@@ -1,0 +1,34 @@
+<div class="c-mngMultiOptions-results">
+    <div class="c-mngMultiOptions-results__header">
+        <span class="c-mngMultiOptions-results__search">
+            <i class="o-mngIco__search"></i>
+        </span>
+        <input class="c-mngMultiOptions-results__input" 
+            [ngClass]="class" 
+            type="text"
+            [placeholder]="multioptionsText.placeholder" 
+            [ngModel]="filterBy" 
+            (ngModelChange)="onChangeFilterBy($event)"
+            (focus)="onFocusInput($event)">
+        <span *ngIf="filterBy.length>0" 
+            class="c-mngMultiOptions-results__clear" 
+            (click)="clearFilter()">
+            <i class="o-mngIco__x"></i>
+        </span>
+    </div>
+    <div class="c-mngMultiOptions-results__results">
+        <div class="c-mngMultiOptions-results__resultsCount" *ngIf="optionsSearchedVisible">{{optionsSearched.length}} {{multioptionsText.searchResults}}</div>
+        <div class="c-mngMultiOptions-results__resultsList" *ngIf="optionsSearchedVisible">
+            <ul class="o-list">
+                <li class="o-list__item" *ngFor="let option of optionsSearched">
+                    <ngc-multioptions-item [option]="option" 
+                        [optionSelected]="optionSelected(option.id)"
+                        (selectOption)="selectOptionEmit($event)" 
+                        (unSelectOption)="unSelectOptionEmit($event)">
+                    </ngc-multioptions-item>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- <div class="c-mngMultiOptions-results___resultsMessage"></div> -->
+</div>

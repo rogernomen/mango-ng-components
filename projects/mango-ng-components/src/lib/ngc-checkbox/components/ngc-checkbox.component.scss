@@ -1,0 +1,92 @@
+@import "../../../../node_modules/design-system-library/scss/itcss/settings/partials/settings.variables";
+
+.c-mngCheck {
+  font-size: .875rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 1rem !important;
+
+  &--inline {
+    display: inline-block;
+    margin-left: 0 !important;
+  }
+}
+
+.c-mngCheck__checkbox:checked+.c-mngCheck__label .c-mngCheck__fake {
+  border-color: #121314
+}
+
+.c-mngCheck__checkbox:checked+.c-mngCheck__label .c-mngCheck__fake:after {
+  width: .625rem;
+  height: .375rem;
+  margin-top: -.3125rem;
+  margin-left: -.3125rem;
+  content: "";
+  border-color: #121314;
+  border-left: 2px solid;
+  border-bottom: 2px solid;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 50%;
+  left: 50%;
+  position: absolute
+}
+
+.c-mngCheck__checkbox:disabled+.c-mngCheck__label {
+  color: #d7d7d8;
+  pointer-events: none
+}
+
+.c-mngCheck__checkbox:disabled+.c-mngCheck__label .c-mngCheck__fake {
+  border-color: #d7d7d8
+}
+
+.c-mngCheck__label {
+  min-height: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+
+.c-mngCheck__label:hover .c-mngCheck__fake {
+  border-width: 2px
+}
+
+.c-mngCheck__fake {
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid #adafb2;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: border .15s ease-in-out;
+  transition: border .15s ease-in-out
+}
+
+.c-mngCheck__fake--indeterminate {
+  border: 1px solid #121314
+}
+
+.c-mngCheck__fake--indeterminate:after {
+  width: .5625rem;
+  content: "";
+  border-bottom: 2px solid
+}

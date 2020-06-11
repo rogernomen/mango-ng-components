@@ -1,0 +1,11 @@
+<div class="c-mngMultiOptions-selected" *ngIf="options && options.length > 0">
+    <ul class="o-list">
+        <li class="o-list__item u-pl-0" *ngFor="let option of options">
+            <ngc-multioptions-item 
+                [option]="option" 
+                [optionSelected]="true" 
+                (unSelectOption)="_unSelectOption($event)">
+            </ngc-multioptions-item>
+        </li>
+    </ul>
+</div>

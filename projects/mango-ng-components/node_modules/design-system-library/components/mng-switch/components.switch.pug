@@ -1,0 +1,9 @@
+mixin mngSwitch(name,items,active)
+	.c-mngSwitch
+		each item, index in items
+			if(index === active)
+				button.c-mngSwitch__btn.is-active
+					| #{item.caption}
+			else
+				button.c-mngSwitch__btn
+					| #{item.caption}

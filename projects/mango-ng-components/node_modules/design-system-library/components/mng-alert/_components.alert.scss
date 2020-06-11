@@ -1,0 +1,29 @@
+$module: $c-prefix + 'Alert';
+
+.#{$module} {
+	@include mng-typescale(zeta);
+	width: 100%;
+	padding: 0 5%;
+	display: inline-flex;
+	justify-content: space-between;
+	align-items: center;
+	&__txt{
+		font-weight: 400;		
+	}
+	&__btn {
+		@include mng-rem(padding, 14px);
+		font-weight: 300;
+	}
+	&--info {
+		background-color: $color-concrete;
+	}
+	&--error {
+		background-color: $color-pomegranate;
+	}
+	&--warning {
+		background-color: $color-marrakech;
+	}
+	&--success {
+		background-color: $color-light-green;
+	}
+}

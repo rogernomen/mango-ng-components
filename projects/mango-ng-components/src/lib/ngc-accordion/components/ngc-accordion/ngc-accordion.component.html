@@ -1,0 +1,11 @@
+<div class="c-mngAccordion" [id]="accordionId">
+    <div class="c-mngAccordion__item" [class.is-open]="isContentShown">
+        <button class="c-mngAccordion__btn" (click)="toggleShowContent()">
+            <span class="c-mngAccordion__text">{{accordionShowName}}</span>
+            <i class="o-mngIco__arrow_down--12"></i>
+        </button>
+        <div class="c-mngAccordion__content">
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,116 @@
+@import "../../../../node_modules/design-system-library/scss/itcss/tools/tools";
+@import "../../../../node_modules/design-system-library/scss/itcss/settings/settings";
+@import "../../../../node_modules/design-system-library/scss/itcss/objects/objects";
+
+
+$module: "c-mngAttach";
+
+.#{$module} {
+    &__activeArea {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include mng-rem(min-height, 190px);
+        @include mng-rem(padding, 0 20%);
+        text-align: center;
+        @include mng-rem(font-size, 14px);
+        @include mng-rem(line-height, 16px);
+        border: dashed rem(1px) $color-bombay;
+        background-color: $color-white;
+        cursor: pointer;
+    }
+    &__dragOutContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        pointer-events: none;
+    }
+    &__dragOverContent {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        pointer-events: none;
+    }
+    .is-mouseover {
+        background-color: $color-concrete;
+    }
+    .is-dragover {
+        background-color: $color-concrete;
+        .#{$module} {
+            &__dragOutContent {
+                display: none;
+            }
+            &__dragOverContent {
+                display: flex;
+            }
+        }
+        * {
+            pointer-events: none;
+        }
+    }
+    &__title {
+        @include mng-rem(font-size, 14px);
+        @include mng-rem(line-height, 16px);
+        text-decoration: underline;
+    }
+    &__text {
+        @include mng-rem(font-size, 12px);
+        @include mng-rem(line-height, 18px);
+        color: $color-nevada;
+        // width: 62%;
+        @include mng-rem(margin-top, 12px);
+    }
+    &__item {
+        @include mng-rem(margin-bottom, 8px);
+    }
+
+    &__file {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        @include mng-rem(height, 32px);
+        @include mng-rem(font-size, 14px);
+        @include mng-rem(line-height, 16px);
+        background-color: $color-concrete;
+        @include mng-rem(padding, 0 8px);
+    }
+    &__name {
+        flex-grow: 1;
+        text-align: left;
+        @include mng-rem(padding-left, 4px);
+    }
+    &__progress[value] {
+        @include mng-rem(height, 2px);
+        width: 100%;
+        display: block;
+        background-color: $color-iron;
+        color: $color-woodsmoke;
+        -webkit-appearance: progress-bar;
+        appearance: progress-bar;
+        border: none;
+        &::-webkit-progress-bar {
+            background-color: $color-iron;
+        }
+        &::-webkit-progress-value {
+            background-color: $color-woodsmoke;
+        }
+        &::-moz-progress-bar {
+            background-color: $color-woodsmoke;
+        }
+        &::-ms-fill {
+            border-color: currentColor;
+        }
+    }
+    &__error {
+        @include mng-rem(margin-top, 8px);
+        @include mng-rem(font-size, 12px);
+        @include mng-rem(line-height, 16px);
+        text-align: right;
+        color: $color-pomegranate;
+    }
+}
+

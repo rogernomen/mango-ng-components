@@ -1,0 +1,8 @@
+<div class="c-mngKebabMenu" [class.is-open] = "openKebabMenu" [class.is-disabled]="disabled">
+    <div class="c-mngKebabMenu__icon" (click)="toggleMenu()">
+        <i class="o-mngIco__more_vert--16"></i>
+    </div>
+    <ul class="c-mngKebabMenu__content" [ngClass]="{'c-mngKebabMenu__content--up': position === 'UP'}">
+        <li *ngFor="let item of items" class="c-mngKebabMenu__item" (click)="selectItem(item)">{{ item.title }}</li>
+    </ul>
+</div>

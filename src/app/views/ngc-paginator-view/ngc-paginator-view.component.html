@@ -1,0 +1,35 @@
+<main>
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-offset-1 col-xs-10 col-md-12 col-md-offset-0">
+                    <header>
+                        <h2>ngc-paginator</h2>
+                    </header>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-offset-1 col-xs-10 col-md-12 col-md-offset-0">
+                    <section>                        
+                        <section>
+                            <h3>Html:</h3>
+                            <code>{{html}}</code>
+                        </section>
+                        <section>
+                            <h3>Código:</h3>
+                            <pre><code>{{ts}}</code></pre>
+                        </section>                            
+                        <section>
+                            <h3>Vista:</h3>   
+                            
+                            <button (click)="cambiarpag()"> boton </button>
+                            <ngc-paginator *ngIf="totalPages" [totalPages]="totalPages" [actualPage]="actualPage"
+                            (changePage)="onChangePage($event)"></ngc-paginator>
+                        </section>                        
+                    </section>
+                </div>
+            </div>
+        </div>
+    </article>
+</main>
+            

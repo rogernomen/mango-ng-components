@@ -1,0 +1,52 @@
+<main>
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-offset-1 col-xs-10 col-md-12 col-md-offset-0">
+          <header>
+            <h2>ngc-modal</h2>
+          </header>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-offset-1 col-xs-10 col-md-12 col-md-offset-0">
+          <section style="margin-bottom: 20px">
+            <h3>Demo</h3>
+            <a class="c-mngLink" (click)="openModal()">Click to Open Modal</a>
+          </section>
+          <section style="margin-bottom: 20px">
+            <a class="c-mngLink" (click)="openBackgroundModal()">Click to Open Modal With Background Image</a>
+          </section>
+          <section>
+            <section>
+              <h3>Modal instance</h3>
+              <code>const modalInstance = this.modalService.open(ModalContentComponent, ModalFooterComponent, ModalHeaderComponent);</code>
+            </section>
+            <section>
+              <h3>Modal content components</h3>
+              <p>Modal open method has 3 arguments:</p>
+              <code>modalService.open(<b class="bold">contentModal: ComponentClassName</b>, <b class="bold">footerModal: ComponentClassName</b>, <b class="bold">modalOptions: ModalOptions</b></code>
+              <br>
+              <p>You can create every component as a normal Angular component and pass component's exported class name to the <b class="bold">modalService.open(ModalContentComponent)</b></p>
+              <br />
+              <code [innerHtml]="contentComponentCode"></code>
+              <br />
+            </section>
+            <section>
+              <h3>Close Modal</h3>
+              <p>Every modal content can have a close method that will trigger modal's close method with a text argument</p>
+              <code>
+                ContentModal.html <br /><br />
+                &lt;button (click)="close('close modal')"&gt;Close Modal&lt;/button&gt;
+              </code>
+              <p>And where you save your modal's instance, you can subscribe to close method to know and act when close method has been triggered</p>
+              <code [innerHtml]="subscribeCode"></code>
+            </section>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</main>
+
+

@@ -1,0 +1,10 @@
+mixin mngAlert(style, text)
+	.c-mngAlert(class='c-mngAlert--' + style, role='status')
+		p.c-mngAlert__txt
+			block
+		button.c-mngAlert__btn
+			if (text)
+				span.c-mngLink
+					= text
+			else
+				+svg-icon("close")(class="c-mngAlert__ico")

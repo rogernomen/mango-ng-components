@@ -1,0 +1,23 @@
+@import "../../../../../projects/mango-ng-components/node_modules/design-system-library/scss/itcss/settings/settings.scss";
+@import "../../../../../projects/mango-ng-components/node_modules/design-system-library/scss/itcss/tools/tools.scss";
+
+$module: 'c-mngMultiOptions-results';
+
+.#{$module} {
+	@include mng-rem(font-size, 12px);
+	position: relative;
+  &__border {
+    border: 1px solid $color-bombay;
+    padding: 1px;
+    display: inline-block;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+  &__fill {
+    @include mng-rem(width height, 14px);
+    // width: 1.4rem;
+    // height: 1.4rem;
+    border-radius: 50%;
+    display: block;
+  }
+}

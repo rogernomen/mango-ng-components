@@ -1,0 +1,15 @@
+<div class="c-mngCheck">
+    <input class="c-mngCheck__checkbox u-hidden-visually" 
+        [id]="'option_' + option.id" 
+        type="checkbox"
+        name="availableOptions" 
+        [value]="option.id" 
+        (change)="selectUnselectOptions($event)" 
+        [checked]="optionSelected">
+    <label class="c-mngCheck__label" 
+        [for]="'option_' + option.id">
+        <span class="c-mngCheck__fake"></span>
+        <ng-template item-host></ng-template>
+        <div *ngIf="!option.dinamicContent">{{option.text}}</div>
+    </label>
+</div>

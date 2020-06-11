@@ -1,0 +1,10 @@
+{
+  "/oneapp/oap-back/*": {
+    "target": "http://doneapp.mango.com/oneapp/oap-back",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/oneapp/oap-back": ""
+    }
+  }
+}

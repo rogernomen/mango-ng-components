@@ -1,0 +1,19 @@
+<ngc-checkbox
+        [checked] = "checkedSelectAllOption"
+        [indeterminate] = "isIndeterminate"
+        [id] = "idSelectAllOption"
+        [name] = "selectAllName"
+        [value] = "selectAllValue"
+        [label] = "selectAllLabel"
+        [(ngModel)]="selectedAll"
+        (selectEmitter)="onSelectAll()">
+</ngc-checkbox>
+
+<ngc-checkbox *ngFor="let option of options"
+        [id] = "option.id"
+        [name] = "option.name"
+        [value] = "option.value"
+        [label] = "option.label"
+        [(ngModel)]="selectedItems"
+        (selectEmitter)="onSelectOtherOption()">
+</ngc-checkbox>

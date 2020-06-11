@@ -1,0 +1,20 @@
+
+<div class="c-mngInlineDropdown" [ngClass]="{'is-open': this.dropdownVisible}" >
+    <div class="c-mngInlineDropdown__container">
+      <div class="c-mngInlineDropdown__header">
+        <span class="c-mngInlineDropdown__title">{{title}} </span>
+        <span class="c-mngInlineDropdown__selected" (click)="toggleDropdownVisibility()">{{selectedOption}}
+          <div class="c-mngInlineDropdown__chevron" ></div>
+        </span>
+      </div>
+      <div class="c-mngInlineDropdown__content">
+        <ul class="c-mngInlineDropdown__list">
+            <li class="c-mngInlineDropdown__item" *ngFor="let option of options" (click)="orderBy(option)">
+                <span class="c-mngInlineDropdown__item">{{option.label}}</span>
+              </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+    
+    

@@ -1,0 +1,20 @@
+@import "../../../../../../projects/mango-ng-components/node_modules/design-system-library/scss/itcss/settings/settings.scss";
+@import "../../../../../../projects/mango-ng-components/node_modules/design-system-library/scss/itcss/tools/tools.scss";
+
+// TODO: Fix in DS
+.c-mngBtn {
+	width: 100%;
+	@include mng-rem(margin, 16px 0 0 !important);
+	&:first-of-type {
+		@include mng-rem(margin-top, 0 !important);
+	}
+	@media screen and (min-width: $screen-md) {
+		@include mng-rem(margin, 0 0 0 16px !important);
+		&:first-of-type {
+			@include mng-rem(margin-left, 0 !important);
+		}
+		min-width: 8rem;
+		width: auto;
+		@include mng-rem(margin, 16px);
+	}
+}

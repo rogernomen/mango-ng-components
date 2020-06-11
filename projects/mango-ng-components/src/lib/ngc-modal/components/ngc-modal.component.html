@@ -1,0 +1,22 @@
+<div class="c-mngModal a-fade-in"
+     [ngClass]="{'c-mngModal--fullscreen' : options.isFullScreen, 'c-mngModal--backgroundImage' : options.backgroundImage}"
+     [ngStyle]="{'background-image': options.backgroundImage ? 'url(' + options.backgroundImage + ')' : ''}">
+	<div class="c-mngModal__overflow a-from-top">
+		<div class="container">
+			<div class="row">
+				<div [ngClass]="options.sizeClasses ? options.sizeClasses : defaultModalSizeClasses ">
+					<div class="c-mngModal__container">
+						<button class="c-mngModal__close" (click)="closeModal()"></button>
+						<div class="c-mngModal__header" *ngIf="options.title">
+							<h1 class="c-mngModal__title">
+								{{options.title}}
+							</h1>
+						</div>
+						<div class="c-mngModal__content"></div>
+						<div class="c-mngModal__footer"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

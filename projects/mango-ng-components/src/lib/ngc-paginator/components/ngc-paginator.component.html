@@ -1,0 +1,21 @@
+<div>
+    <ul class="c-mngPagination">
+      <li (click)="onClickPreviusItem()" class="c-mngPagination__item c-mngPagination__item--btn" [ngClass]="{'is-disabled': actualPage == 1}">
+        <a class="c-mngPagination__link"><</a>
+      </li>
+      <li *ngIf="morePagesOnLeftSide" (click)="onClickItem(firstPage)" class="c-mngPagination__item">
+        <a class="c-mngPagination__link">1</a>
+      </li>
+      <li class="c-mngPagination__item c-mngPagination__item--gap" *ngIf="morePagesOnLeftSide">...</li>
+      <li *ngFor="let number of pages" class="c-mngPagination__item" [ngClass]="{'is-active': actualPage == number}" (click)="actualPage == number ? null : onClickItem(number)">
+        <a class="c-mngPagination__link">{{number}}</a>
+      </li>
+      <li class="c-mngPagination__item c-mngPagination__item--gap" *ngIf="morePagesOnRightSide">...</li>
+      <li class="c-mngPagination__item" (click)="onClickItem(totalPages)" *ngIf="morePagesOnRightSide">
+        <a class="c-mngPagination__link">{{totalPages}}</a>
+      </li>
+      <li class="c-mngPagination__item c-mngPagination__item--btn" (click)="onClickNextItem()" [ngClass]="{'is-disabled': actualPage == totalPages}">
+        <a class="c-mngPagination__link">></a>
+      </li>
+    </ul>
+  </div>

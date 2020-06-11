@@ -1,0 +1,13 @@
+{
+  "name": "mango-ng-components",
+  "version": "6.2.0",
+  "dependencies": {
+    "design-system-library": "0.x",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "text-mask-core": "^5.1.2"
+  },
+  "publishConfig": {
+    "registry": "http://192.168.49.124:8081/repository/npm-mango-private/"
+  }
+}

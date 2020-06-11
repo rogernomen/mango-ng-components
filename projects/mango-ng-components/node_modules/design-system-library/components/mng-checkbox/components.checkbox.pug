@@ -1,0 +1,6 @@
+mixin mngCheck(text, id, name, style, styleCheck)
+	.c-mngCheck(class=style)
+		input.c-mngCheck__checkbox.u-hidden-visually(id=id, type='checkbox', name=name)&attributes(attributes)
+		label.c-mngCheck__label(for=id)
+			span.c-mngCheck__fake(class=styleCheck)
+			= text

@@ -1,0 +1,9 @@
+mixin mngTooltip(style)  
+    .tooltip Pasa el ratón por encima
+        span.c-mngTooltip.o-type--caption(class=style,role='tooltip')&attributes(attributes)  
+            span.c-mngTooltip__arrow
+            block
+
+mixin mngTooltipReverse(style)
+    +mngTooltip("c-mngTooltip--reverse")&attributes(attributes)
+        block

@@ -1,0 +1,25 @@
+<div class="c-mngAttach">
+    <ul class="c-mngAttach__list">
+        <li class="c-mngAttach__item" *ngFor="let fileSel of selectedFiles;let i = index">
+            <div class="c-mngAttach__file">
+                <i class="o-mngIco__clip--16"></i>
+                <p class="c-mngAttach__name"> {{fileSel.file.fileName !== undefined ? fileSel.file.fileName : fileSel.file.name}}</p>
+                <i (click)="closeFile(fileSel)" class="o-mngIco__x--16"></i>
+            </div>
+            <!-- <progress class="c-mngAttach__progress" max="100" value="80"></progress> -->
+            <div class="c-mngAttach__error" *ngIf="fileSel.errorText">{{fileSel.errorText}}</div>
+        </li>
+    </ul>
+    <div class="c-mngAttach__activeArea" *ngIf="(isSingleUpload && selectedFiles.length === 0) || !isSingleUpload"
+        (click)="fileInput.click()" appDnd (onFileDropped)="onFileDropped($event)">
+        <div class="c-mngAttach__dragOutContent">
+            <i class="o-mngIco__clip--24 u-mb-2"></i>
+            <input hidden type="file" #fileInput (change)="onFileSelected($event)" [attr.multiple] = "isSingleUpload ? null : true">
+            <p class="c-mngAttach__title">{{attachInfo.header}}</p>
+            <p class="c-mngAttach__text">{{attachInfo.subHeader}}</p>
+        </div>
+        <div class="c-mngAttach__dragOverContent">
+            <p class="c-mngAttach__dragInfo">{{attachInfo.dragOver}}</p>
+        </div>
+    </div>
+</div>

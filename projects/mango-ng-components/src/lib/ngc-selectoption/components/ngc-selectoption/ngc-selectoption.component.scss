@@ -1,0 +1,58 @@
+@import "../../../../../node_modules/design-system-library/scss/itcss/tools/tools";
+@import "../../../../../node_modules/design-system-library/scss/itcss/settings/settings";
+
+.c-mngSelectOptionInput {
+	@include mng-rem(font-size, 12px);
+	position: relative;
+	&__input {
+		border-bottom: 1px solid $color-woodsmoke;
+		width: 100%;
+		@include mng-rem(padding, 0 24px 8px);
+		&.is-active, &:focus {
+			@include mng-rem(border-bottom-width, 2px);
+		}
+		&::placeholder {
+			color: $color-bombay;
+		}
+    }
+	&__clear {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}	    
+    .icon {
+        @include mng-rem(width height, 16px);
+        &--16 {
+            @include mng-rem(width height, 16px);
+        }
+        &--32 {
+            @include mng-rem(width height, 32px);
+        }
+    }
+    .icon-search {
+        --color-1: #{$color-woodsmoke};
+        position: absolute;
+        left: 0;
+        top: 0;
+    }	    
+}
+
+.c-mngSelectOptionList {
+    -webkit-overflow-scrolling: touch;
+    @include mng-rem(max-height, 271px);
+    @include mng-rem(margin-top, 16px);
+    overflow-y: auto;
+    position: relative;
+	@include mng-rem(font-size, 14px);
+    &::-webkit-scrollbar {
+        @include mng-rem(width, 8px);
+        &-track {
+            background-color: $color-concrete;
+        }
+        &-thumb {
+            background-color: $color-iron;
+            @include mng-rem(border-radius, 7px);
+        }
+	}
+}
+

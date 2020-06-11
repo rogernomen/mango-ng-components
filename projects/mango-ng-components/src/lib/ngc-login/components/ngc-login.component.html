@@ -1,0 +1,48 @@
+<div class="pc-login">
+
+  <form name="form" (ngSubmit)="login(loginForm)" #loginForm="ngForm" class="pc-login__form">
+
+    <div *ngIf="logoSrc" class="pc-login__header">
+      <img [src]="logoSrc" alt="MANGO" title="MANGO" class="pc-login__logo">
+    </div>
+
+    <fieldset>
+      <div id="errorLogin" class="pc-login__error" [innerHtml]="loginText.errorMessage  ? loginText.errorMessage : ''"></div>
+      <div class="c-mngInput" [ngClass]="{'is-error': username.invalid && (username.dirty || username.touched)}">
+        <input class="c-mngInput__input"
+                type="text" name="username" [(ngModel)]="formState.username" [placeholder]="loginText.userInputPlaceholder"
+                autocomplete="off"
+                name="username"
+                #username="ngModel"
+                [required]="true"/>
+        <div *ngIf="username.errors && (username.dirty || username.touched)">
+          <div *ngIf="username.errors.required" class="c-mngInput__feedback">{{loginText.usernameRequiredMessage}}</div>
+        </div>
+      </div>
+      <div class="c-mngInput" [ngClass]="{'is-error': password.invalid && (password.dirty || password.touched)}">
+        <app-input-password [placeholder]="loginText.passwordInputPlaceholder"
+                    name="password"
+                    [(ngModel)]="formState.password"
+                    #password="ngModel"
+                    [required]="true"
+                    [togglePasswordVisibility]="true"></app-input-password>
+        <div *ngIf="password.errors && (password.dirty || password.touched)">
+          <div *ngIf="password.errors.required" class="c-mngInput__feedback">{{loginText.passwordRequiredMessage}}</div>
+        </div>
+      </div>
+      <div class="c-mngInput" *ngIf="showKeepSession">
+        <ngc-checkbox name="keepSession" value="keepSession" [label]="loginText.keepSessionLabel" id="keepSession" [(ngModel)]="formState.saveSession"></ngc-checkbox>
+      </div>
+    </fieldset>
+
+    <div class="pc-login__actions">
+      <button class="c-mngBtn c-mngBtn--primary c-mngBtn--block" type="submit" [class.u-eventsNone]="isLoading" [class.is-active]="isLoading" [disabled]="loginForm.invalid">
+        <span [class.u-hidden]="isLoading">{{loginText.submitLabel}}</span>
+        <div *ngIf="isLoading" class="c-mngSpinner c-mngSpinner--reverse">
+    <!--<div class="c-mngSpinner__text">Carga lenta</div> -->
+    <!-- TODO: Poner .u-hidden cuando no sea necesario poner Carga lenta. Estaria bien que se pudiera traducir el mensaje -->
+        </div>
+      </button>
+    </div>
+  </form>
+</div>

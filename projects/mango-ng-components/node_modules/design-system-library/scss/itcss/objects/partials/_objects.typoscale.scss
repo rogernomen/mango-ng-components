@@ -1,0 +1,57 @@
+
+.o-type {
+	&--mega {
+		@include mng-family-serif();
+		@include mng-typescale(mega);
+		@include mng-line-height(heading);
+	}
+	&--giga {
+		@include mng-family-serif();
+		@include mng-typescale(giga);
+		@include mng-line-height(heading);
+	}
+	&--alpha {
+		@include mng-typescale(alpha);
+		@include mng-line-height(heading);
+	}
+	&--beta {
+		@include mng-typescale(beta);
+		@include mng-line-height(heading);
+	}
+	&--gamma {
+		@include mng-typescale(gamma);
+		@include mng-line-height(heading);
+	}
+	&--delta {
+		@include mng-typescale(delta);
+		@include mng-line-height(heading);
+	}
+	&--omega {
+		@include mng-typescale(omega);
+		@include mng-line-height(heading);
+	}
+	&--epsilon {
+		@include mng-typescale(epsilon);
+		@include mng-line-height(heading);
+	}
+	&--zeta {
+		@include mng-typescale(zeta);
+		@include mng-line-height(body);
+	}
+	&--caption {
+		@include mng-typescale(caption);
+		@include mng-line-height(body);
+		font-weight: 400;
+	}
+	&--legal {
+		@include mng-typescale(legal);
+		@include mng-line-height(body);
+		font-weight: 400;
+	}
+	&--caps {
+		text-transform: uppercase;
+	}
+	&--bolder {
+		font-weight: 400;
+	}
+}

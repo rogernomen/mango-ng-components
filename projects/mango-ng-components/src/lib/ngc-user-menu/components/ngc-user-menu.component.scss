@@ -1,0 +1,181 @@
+@import "../../../../node_modules/design-system-library/scss/itcss/tools/tools";
+@import "../../../../node_modules/design-system-library/scss/itcss/settings/settings";
+
+
+
+.back-icon {
+  position: absolute;
+  @include mng-rem(width, 20px);
+  @include mng-rem(height, 20px);
+  @include mng-rem(left, 42px);
+  @include mng-rem(margin-top, 5px);
+  cursor: pointer;
+}
+
+
+.pc-dropdownMenu {
+  @include mng-rem(font-size, 12px);
+  @include mng-rem(margin-right, 8px);
+  color: $color-woodsmoke;
+  text-align: left;
+  display: inline-block;
+  font-weight: 300;
+  &:hover {
+    .pc-dropdownMenu__level0-item > .pc-dropdownMenu__link > .arrow {
+      transform: rotate(-180deg);
+      transition: 0.15s;
+    }
+  }
+  &__link {
+    color: $color-woodsmoke;
+    text-decoration: none;
+    cursor: pointer;
+    @include mng-rem(font-size, 12px);
+    display: flex;
+    align-items: center;
+    &-info {
+      color: $color-nevada;
+    }
+  }
+  &__group {
+    @include mng-rem(font-size, 10px);
+    @include mng-rem(padding, 8px 16px);
+    @include mng-rem(margin-top, 8px);
+    color: $color-nevada;
+    text-transform: uppercase;
+  }
+  &__level1-list,
+  &__level3-list {
+    position: absolute;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    box-shadow: rem(0px) rem(3px) rem(6px) rem(0px) rgba(0, 0, 0, 0.07);
+    z-index: 1;
+  }
+  &__level0-item,
+  &__level1-item,
+  &__level2-item,
+  &__level3-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $color-white;
+    &:hover > .pc-dropdownMenu__level1-list,
+    &:hover > .pc-dropdownMenu__level3-list {
+      display: inline;
+    }
+  }
+  &__level2-item:hover,
+  &__level3-item:hover {
+    background-color: $color-concrete;
+    > .pc-dropdownMenu__link {
+      font-weight: 400;
+    }
+  }
+  &__level0-list {
+    list-style: none;
+    display: inline-block;
+  }
+  &__level0-item {
+    background-color: transparent;
+    @include mng-rem(width, 160px);
+    @include mng-rem(height, 32px);
+    @include mng-rem(padding, 0 16px);
+    @include mng-rem(font-size, 14px);
+    @include mng-rem(line-height, 18px);
+    > .pc-dropdownMenu__link {
+      white-space: nowrap;
+      @include mng-rem(right, 0px);
+      position: absolute;
+      .pc-dropdownMenu__username {
+        display: none;
+        @include mng-rem(font-size, 14px);
+      }
+      .icon {
+        @include mng-rem(width, 24px);
+        @include mng-rem(height, 24px);
+        @include mng-rem(margin-right, 8px);
+        vertical-align: bottom;
+      }
+      .arrow {
+        display: none;
+        @include mng-rem(width, 12px);
+        @include mng-rem(height, 12px);
+        @include mng-rem(margin-left, 8px);
+        transition: 0.15s;
+      }
+    }
+  }
+  &__level1-list {
+    left: 0;
+    @include mng-rem(top, 32px);
+    @include mng-rem(width, 160px);
+  }
+  &__level1-item {
+    @include mng-rem(min-height, 40px);
+    background-color: $color-white;
+    > .pc-dropdownMenu__group {
+      @include mng-rem(margin-top, 8px);
+    }
+    > .pc-dropdownMenu__username {
+      @include mng-rem(font-size, 10px);
+      @include mng-rem(line-height, 14px);
+      @include mng-rem(padding, 0 16px);
+    }
+  }
+  &__level2-item {
+    @include mng-rem(min-height, 40px);
+    @include mng-rem(padding, 0 16px);
+    > .pc-dropdownMenu__link {
+      .icon {
+        @include mng-rem(width, 14px);
+        @include mng-rem(height, 14px);
+        @include mng-rem(margin-right, 8px);
+      }
+      .arrow {
+        @include mng-rem(width, 10px);
+        @include mng-rem(height, 10px);
+        @include mng-rem(margin-left, 8px);
+        transform: rotate(270deg);
+      }
+    }
+  }
+  &__level3-list {
+    top: 0;
+    z-index: 1;
+    @include mng-rem(right, 160px);
+    @include mng-rem(width, 120px);
+
+  }
+  &__level3-item {
+    @include mng-rem(height, 40px);
+    @include mng-rem(padding, 0 16px);
+  }
+}
+
+
+
+@media (min-width: $screen-sm) {
+  .pc-dropdownMenu {
+    @include mng-rem(margin-right, 16px);
+    &__level0-item {
+      > .pc-dropdownMenu__link {
+        @include mng-rem(right, 40px);
+        > .pc-dropdownMenu__username {
+          display: inline-block;
+        }
+        > .arrow {
+          display: block;
+        }
+      }
+    }
+    &__level1-item {
+      > .pc-dropdownMenu__username {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+$module: $c-prefix + 'Tooltip';
+
+.tooltip{
+  position: relative;
+  display: inline-block;
+  color: $color-woodsmoke;
+  &:hover{
+    .#{$module}{
+      opacity: 1;
+      -webkit-transition: opacity .5s ease-in;
+      transition: opacity .5s ease-in;
+    }
+  }
+}
+.ds-sample--inverse{
+  .tooltip{
+    color: $color-concrete;
+  }
+}
+.#{$module} {
+  background-color: $color-woodsmoke;
+  color: $color-concrete;
+  text-align: center;
+  @include mng-rem(padding,8px);
+  @include mng-rem(min-width,40px);
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  -webkit-transition: opacity .5s ease-out;
+  transition: opacity .5s ease-out;
+  &__arrow{
+    content: "";
+    position: absolute;
+    border-style: solid;
+  }
+  &.top{
+    @include mng-rem(top,-50px);
+    left: 50%;
+    margin-left: -60px;
+    .#{$module}__arrow{
+      top: 100%;
+      left: 50%;
+      @include mng-rem(margin-left,-8px);
+      @include mng-rem(border-width,8px);
+      border-color: $color-woodsmoke transparent transparent transparent;
+    }
+  }
+  &.bottom{
+    @include mng-rem(bottom,-50px);
+    left: 50%;
+    margin-left: -60px;
+    .#{$module}__arrow{
+      bottom: 100%;
+      left: 50%;
+      @include mng-rem(margin-left,-8px);
+      @include mng-rem(border-width,8px);
+      border-color:  transparent transparent $color-woodsmoke transparent;
+    }
+  }
+  &--reverse{
+    background-color: $color-concrete;
+    color: $color-woodsmoke;
+    &.top{
+      .#{$module}__arrow{
+        border-color: $color-concrete transparent transparent transparent;
+      }
+      
+    }
+    &.bottom{
+      .#{$module}__arrow{
+        border-color:  transparent transparent $color-concrete transparent;
+      }
+      
+    }
+  }
+}

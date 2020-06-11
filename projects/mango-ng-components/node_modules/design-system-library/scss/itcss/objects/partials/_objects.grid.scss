@@ -1,0 +1,61 @@
+
+// Basado en FlexboxGrid: 
+// http://flexboxgrid.com/
+// ------------------------
+
+.o-grid {
+  @include mng-rem(max-width, $grid-max-width);
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  @include mng-breakpoint($screen-md-min) {
+    width: 94%;
+  }
+  @include mng-breakpoint($screen-lg-min) {
+    width: 80%;
+  }
+  &--fluid {
+    padding-right: 2rem;
+    padding-left: 2rem;
+    width: auto;
+  }
+  &__row {
+    @include mng-rem(margin-right, (-$grid-gutter / 2));
+    @include mng-rem(margin-left, (-$grid-gutter / 2)); 
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    flex-wrap: wrap;
+    @include mng-breakpoint($screen-md-min) {
+      @include mng-rem(margin-right, (-$grid-gutter));
+      @include mng-rem(margin-left, (-$grid-gutter));
+    }
+  }
+  &__col {
+    @include mng-rem(padding-right, $grid-gutter / 2);
+    @include mng-rem(padding-left, $grid-gutter / 2);
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 0;
+    max-width: 100%;
+    @include mng-breakpoint($screen-md-min) {
+      @include mng-rem(padding-right, $grid-gutter);
+      @include mng-rem(padding-left, $grid-gutter);
+    }
+  }
+  @each $device, $options in $grid-map {
+    @include mng-breakpoint(map-get($options, viewport)) {
+      @for $i from 1 through 12 {
+        &__col-#{map-get($options, prefix)}-#{$i} {
+          @include mng-col-width($i);
+        }
+      }
+      @for $i from 0 through 12 {
+        &__col-#{map-get($options, prefix)}off--#{$i} {
+          @include mng-col-offset($i);
+        }
+      }
+    }
+  }
+}

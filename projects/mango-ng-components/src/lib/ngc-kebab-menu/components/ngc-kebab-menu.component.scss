@@ -1,0 +1,12 @@
+.c-mngKebabMenu {
+  position: relative;
+  &__content {
+    &--up {
+      position: absolute;
+      top: -5rem;
+      right: 1rem;
+      transform: none !important;
+      transition: none !important;
+    }
+  }
+}

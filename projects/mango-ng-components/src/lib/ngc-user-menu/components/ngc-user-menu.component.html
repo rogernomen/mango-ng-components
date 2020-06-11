@@ -1,0 +1,11 @@
+<ul class="pc-dropdownMenu__level0-list">
+  <li class="pc-dropdownMenu__level0-item">
+    <ngc-user-menu-head [value]="head.value" [iconSrc]="head.iconSrc"></ngc-user-menu-head>
+    <ul class="pc-dropdownMenu__level1-list">
+      <li class="pc-dropdownMenu__level1-item" *ngFor="let menuSection of items">
+        <span class="pc-dropdownMenu__group">{{menuSection.sectionTitle}}</span>
+        <ngc-user-menu-item *ngFor="let child of menuSection.children" [item]="child"></ngc-user-menu-item>
+      </li>
+    </ul>
+  </li>
+</ul>

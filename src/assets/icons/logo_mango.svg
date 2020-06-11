@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 204.852 70.041">
+    <defs>
+        <style>
+            .cls-1,.cls-2{fill:#121314}.cls-2{font-size:14px;font-family:MangoSans-Light,MangoSans;font-weight:300;letter-spacing:.1em}
+        </style>
+    </defs>
+    <g id="logo_MSC" data-name="logo MSC" transform="translate(-409.574 -139.292)">
+        <g id="Group_12942" data-name="Group 12942" transform="translate(-278.427 -86.709)">
+            <g id="Group_12926" data-name="Group 12926" transform="translate(688.001 226.001)">
+                <g id="Group_12877" data-name="Group 12877">
+                    <g id="Group_11769" data-name="Group 11769">
+                        <path id="Path_2346" d="M15.7 15.869l3.166 5.012L25.2 10.857v22.292h5.408V.7h-5.54z" class="cls-1" data-name="Path 2346" transform="translate(5.01 .224)"/>
+                        <path id="Path_2347" d="M5.54.7H0v32.449h5.408V10.857l12.4 19.786 3.166-5.012z" class="cls-1" data-name="Path 2347" transform="translate(0 .224)"/>
+                        <path id="Path_2348" d="M58.437 23.124l5.012 10.025h6.6L53.556.7H47.62l8.31 17.148H44.982l2.77-5.54L44.85 6.24 31 33.149h6.068l5.276-10.025z" class="cls-1" data-name="Path 2348" transform="translate(9.891 .224)"/>
+                        <path id="Path_2349" d="M89.408.7H84v15.7l5.408 5.54z" class="cls-1" data-name="Path 2349" transform="translate(26.801 .224)"/>
+                        <path id="Path_2350" d="M69.54.7H64v32.449h5.408V8.878L91.7 33.149h4.089v-3.957z" class="cls-1" data-name="Path 2350" transform="translate(20.42 .224)"/>
+                        <path id="Path_2351" d="M124.53 9.861a15.736 15.736 0 0 0-11.08-4.485c-7.123 0-13.059 4.353-13.982 10.157H93.4C94.191 6.7 103.293.1 113.45.1a21.646 21.646 0 0 1 15.3 5.936z" class="cls-1" data-name="Path 2351" transform="translate(29.8 .032)"/>
+                        <path id="Path_2352" d="M112.795 24.991c-5.936 0-11.08-3.3-12.927-7.782H93.8c1.979 7.782 10.025 13.059 19.39 13.059a29.568 29.568 0 0 0 6.859-.791c4.749-1.187 9.893-4.221 9.893-9.1V11.8h-17.147v5.408H124.4v2.506c0 2.77-4.089 4.353-6.6 4.881a24.548 24.548 0 0 1-4.485.528h-.528z" class="cls-1" data-name="Path 2352" transform="translate(29.928 3.765)"/>
+                        <path id="Path_2353" d="M164.776 17.148C164.776 7.519 155.939 0 145.254 0 134.833 0 125.6 7.123 125.6 16.62c0 8.97 7.255 16.093 16.884 17.28v-5.408c-6.332-1.055-11.08-5.8-11.08-11.476 0-6.463 6.2-11.74 13.718-11.74 7.651 0 13.718 5.276 13.718 11.74 0 5.672-4.749 10.421-10.948 11.476V33.9c9.366-1.187 16.884-8.046 16.884-16.752z" class="cls-1" data-name="Path 2353" transform="translate(40.075)"/>
+                    </g>
+                </g>
+            </g>
+            <text id="SOLUTIONS_CENTER" class="cls-2" data-name="SOLUTIONS CENTER" transform="translate(714.863 292.042)">
+                <tspan x="0" y="0">SOLUTIONS CENTER</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
